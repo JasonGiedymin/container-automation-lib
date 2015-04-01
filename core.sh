@@ -9,7 +9,7 @@
 #
 
 function debug() {
-  echo " ---> [$@"]
+  printf "\n ---> [$@]\n"
 }
 
 #
@@ -53,6 +53,18 @@ function runCmd() {
 
   echo "[$cmd] exited successfully."
   return 0; 
+}
+
+#
+# My version of trap.
+#
+function catch() {
+  local rc=$?
+
+  if [ $rc -gt 0 ]; then
+    echo "Script ran into errors, see above."
+    exit $rc
+  fi;
 }
 
 #
