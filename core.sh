@@ -8,6 +8,9 @@
 # version: 1.0.0
 #
 
+function debug() {
+  echo " ---> [$@"]
+}
 
 #
 # Run a list of functions (map)
@@ -17,8 +20,7 @@ function run() {
   local cmd=""
 
   for cmd in "${cmdList[@]}" ; do
-      # echo "Running $cmd"
-      echo "--> [$cmd]"
+      debug "$cmd"
       $cmd
       local rc=$?
       if [ $rc -gt 0 ]; then
