@@ -72,7 +72,7 @@ function catch() {
 #
 function runCpanm() {
   local packages=("$@")
-  local cmd=cpanm
+  local cmd="cpanm --notest"
   runCmd "$cmd" "${packages[@]}"
 }
 
