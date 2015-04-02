@@ -67,6 +67,15 @@ function catch() {
   fi;
 }
 
+function cancel() {
+  echo "Script canceled by user!"
+  exit 2;
+}
+
+function setTrap() {
+  trap cancel INT
+}
+
 #
 # cpanm package installer
 #
