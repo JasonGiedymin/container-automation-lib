@@ -3,7 +3,7 @@ container-automation-lib
 
 # MOVED To [new owner](https://github.com/Amuxbit/container-automation-lib)
 
-This repo has been transfered to a new owner. See 
+This repo has been transferred to a new owner. See 
 [Amuxbit](https://github.com/Amuxbit/container-automation-lib). 
 This repo will be frozen.
 
